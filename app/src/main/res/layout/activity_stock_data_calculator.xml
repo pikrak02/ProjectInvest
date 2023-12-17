@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theoretical Investment Calculator"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/stockSymbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Stock Symbol (e.g., AMZN)"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:elevation="4dp" />
+
+
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Start Date (yyyy-MM-dd)"
+        android:layout_below="@id/stockSymbol"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:cursorVisible="false" />
+
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="End Date (yyyy-MM-dd)"
+        android:layout_below="@id/startDate"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:focusable="false"
+        android:clickable="true"
+        android:cursorVisible="false" />
+
+    <EditText
+        android:id="@+id/monthlyContribution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monthly Contribution"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/endDate"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:elevation="4dp" />
+
+    <Button
+        android:id="@+id/fetchDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetch Data"
+        android:layout_below="@id/monthlyContribution"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/stockDataResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fetchDataButton"
+        android:padding="16dp"
+        android:background="#E8EAF6"
+        android:elevation="2dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stockDataResult">
+
+        <TextView
+            android:id="@+id/monthlyBreakdownView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#E8EAF6"
+            android:elevation="2dp" />
+    </ScrollView>
+
+
+
+</RelativeLayout>

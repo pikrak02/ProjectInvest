@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnBuyMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy Mode"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnSellMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sell Mode"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etStockSymbol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Stock Symbol (e.g., AAPL)"/>
+
+    <LinearLayout
+        android:id="@+id/layoutPurchaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etPurchaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Purchase Date (yyyy-MM-dd)"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNumberOfShares"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Number of Shares"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"/>
+
+    <TextView
+        android:id="@+id/tvPortfolio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Portfolio Details"
+        android:padding="16dp"/>
+
+</LinearLayout>
